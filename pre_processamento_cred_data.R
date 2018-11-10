@@ -1,7 +1,7 @@
 # Limpando dados - Base de Créditos
 
 # Fazendo a leitura da base de dados
-base <- read.csv('credit-data.csv')
+base <- read.csv('data/credit-data.csv')
 
 # Retirando a coluna clienteid do data frame
 base$clientid <- NULL
@@ -26,7 +26,7 @@ library(caTools)
 set.seed(1)
 
 # Cria a variável divisão para poder fazer a previsão na coluna default
-divisao <- sample.split(base$default, SplitRatio = 0.75) # Como a base hitórica possui 200 registros, 1500 registros serão usados para o algorítmo aprender e 500 para teste
+divisao <- sample.split(base$default, SplitRatio = 0.75) # Como a base hitórica possui 2000 registros, 1500 registros serão usados para o algorítmo aprender e 500 para teste
 base_treinamento <- subset(base, divisao == TRUE) # Cria na base_treinamento um subconjunto da base que é a original onde divisao for igual a TRUE
 base_teste <- subset(base, divisao == FALSE) # Cria na base_teste um subconjunto da base que é a original onde divisao for igual a FALSE
 

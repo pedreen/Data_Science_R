@@ -1,5 +1,5 @@
 # Leitura da base de dados
-base <- read.csv('census.csv')
+base <- read.csv('data/census.csv')
 
 # Apagar a coluna X
 base$X <- NULL
@@ -39,7 +39,7 @@ library(caTools)
 # Porção da base de dados para fazer a divisão, gerando números aleatórios
 set.seed(1)
 # Cria a variável divisão para poder fazer a previsão na coluna default
-divisao <- sample.split(base$income, SplitRatio = 0.85) # 1500 registros serão usados para o algorítmo aprender e 500 para teste
+divisao <- sample.split(base$income, SplitRatio = 0.85) #  A base de dados contem 30162 registros, 25638 registros serão usados para o algorítmo aprender e 4524 para teste
 base_treinamento <- subset(base, divisao == TRUE) # Cria na base_treinamento um subconjunto da base que é a original onde divisao for igual a TRUE
 base_teste <- subset(base, divisao == FALSE) # Cria na base_teste um subconjunto da base que é a original onde diviao dor igual a FALSE
 
