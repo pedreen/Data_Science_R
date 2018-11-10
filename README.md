@@ -1,2 +1,2 @@
 # Data_Science_R
-A repositroy with a little of machine learning and data science with R
+Um repositório em construção com um pouco de aprendizado de máquina e ciência de dados com R.
